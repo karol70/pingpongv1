@@ -1,9 +1,10 @@
 object Form1: TForm1
-  Left = 219
-  Top = 184
-  Width = 1018
-  Height = 540
-  Caption = 'Form1'
+  Left = 183
+  Top = 140
+  Width = 1022
+  Height = 539
+  AutoSize = True
+  Caption = 'PingPong by Karol'
   Color = clBtnFace
   UseDockManager = True
   DockSite = True
@@ -13,12 +14,16 @@ object Form1: TForm1
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  Scaled = False
   OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
+  DesignSize = (
+    1006
+    500)
   PixelsPerInch = 96
   TextHeight = 13
   object tlo: TImage
-    Left = 8
+    Left = 0
     Top = 0
     Width = 1000
     Height = 500
@@ -7841,6 +7846,8 @@ object Form1: TForm1
       8888888888888888888888888888888888888888888888888888888888888888
       8888888888888888888888888888888888888888888888888888888888888888
       888888888888888888888888888888888888}
+    Proportional = True
+    Stretch = True
   end
   object LeftPaddle: TImage
     Left = 40
@@ -8124,6 +8131,10 @@ object Form1: TForm1
     Width = 40
     Height = 40
     AutoSize = True
+    Constraints.MaxHeight = 40
+    Constraints.MaxWidth = 40
+    Constraints.MinHeight = 40
+    Constraints.MinWidth = 40
     Picture.Data = {
       07544269746D617096030000424D960300000000000076000000280000002800
       0000280000000100040000000000200300000000000000000000100000000000
@@ -8158,65 +8169,92 @@ object Form1: TForm1
     Transparent = True
   end
   object Info: TLabel
-    Left = 336
-    Top = 16
-    Width = 241
-    Height = 33
+    Left = 0
+    Top = 0
+    Width = 1005
+    Height = 49
     Alignment = taCenter
+    Anchors = [akLeft, akTop, akRight]
+    AutoSize = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -31
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
+    Transparent = True
     Visible = False
   end
   object points: TLabel
-    Left = 432
-    Top = 64
-    Width = 105
-    Height = 36
+    Left = 0
+    Top = 56
+    Width = 1005
+    Height = 44
     Alignment = taCenter
+    Anchors = [akLeft, akTop, akRight]
+    AutoSize = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -31
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
+    Transparent = True
     Visible = False
   end
   object label1: TLabel
-    Left = 360
-    Top = 120
-    Width = 233
+    Left = 0
+    Top = 112
+    Width = 1006
     Height = 36
     Alignment = taCenter
+    Anchors = [akLeft, akTop, akRight]
+    AutoSize = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -31
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
+    Transparent = True
     Visible = False
   end
   object Button1: TButton
-    Left = 392
-    Top = 296
-    Width = 169
+    Left = 408
+    Top = 200
+    Width = 197
     Height = 65
-    Caption = 'Rozpocznij gr'#281
+    Anchors = [akLeft, akTop, akRight]
+    Caption = 'Rozpocznij Gr'#281
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clBlack
     Font.Height = -23
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    Visible = False
     OnClick = Button1Click
   end
+  object Button2: TButton
+    Left = 408
+    Top = 280
+    Width = 197
+    Height = 49
+    Anchors = [akLeft, akTop, akRight]
+    Caption = 'Nowa Gra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -31
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    Visible = False
+    OnClick = Button2Click
+  end
   object BallTimer: TTimer
-    Interval = 15
+    Enabled = False
+    Interval = 20
     OnTimer = BallTimerTimer
     Left = 216
     Top = 24
